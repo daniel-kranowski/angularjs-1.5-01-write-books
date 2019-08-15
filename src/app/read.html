@@ -1,0 +1,30 @@
+<div id="read">
+    <h1>{{book.mediumTitle}}</h1>
+    <p data-ng-if="book.mediumTitle !== book.title">
+        Full title: {{book.title}}
+    </p>
+    <p data-ng-pluralize count="book.chapters.length"
+                  when="{'one': '1 chapter', 'other': '{} chapters'}"></p>
+
+    <table>
+        <tr>
+            <td>
+                <div data-page-directive data-page-num="{{+readPageNum - 1}}" class="leftPage"></div>
+            </td>
+            <td>
+                <div data-page-directive data-page-num="{{+readPageNum}}" class="rightPage"></div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="bookNav">
+        <p>
+            <a href="#{{prevPageUrl}}" class="btn btn-default prev-page-nav" data-ng-disabled="!prevPageUrl">Previous Page</a>
+            <a href="#{{nextPageUrl}}" class="btn btn-default next-page-nav" data-ng-disabled="!nextPageUrl">Next Page</a>
+        </p>
+        <p>
+            <a href="#/dashboard" class="btn btn-default">Back to Dashboard</a>
+        </p>
+    </div>
+
+</div>

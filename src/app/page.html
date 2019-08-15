@@ -1,0 +1,9 @@
+<div class="page">
+    <div data-ng-if="page !== undefined">
+        <div data-ng-if="page.isChapterStart">
+            <h2>Chapter {{page.chapter.num}}</h2>
+        </div>
+        <p class="paragraph" data-ng-repeat="paragraph in page.paragraphs">{{paragraph}}</p>
+        <p class="pageNum pageNum-{{page.pageNum % 2 === 1 ? 'odd' : 'even'}}">{{page.pageNum}}</p>
+    </div>
+</div>

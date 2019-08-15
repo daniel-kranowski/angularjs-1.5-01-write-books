@@ -1,0 +1,47 @@
+#read {
+
+  @pageWidth: 400px;
+  @pageHeight: 500px;
+  @tableWidth: 2 * @pageWidth;
+
+  table {
+    width: @tableWidth;
+    margin: 2em 0;
+  }
+
+  td {
+    border: solid 1px black;
+    width: @pageWidth;
+    height: @pageHeight;
+    vertical-align: top;
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  .page {
+    padding: 1em;
+    position: relative;
+    height: @pageHeight;
+  }
+
+  .pageNum-even, .pageNum-odd {
+    position: absolute;
+    bottom: 0.5em;
+  }
+
+  .pageNum-even {
+    left: 2em;
+  }
+
+  .pageNum-odd {
+    right: 2em;
+  }
+
+  .bookNav {
+    width: @tableWidth;
+  }
+
+  .next-page-nav {
+    float: right;
+  }
+
+}

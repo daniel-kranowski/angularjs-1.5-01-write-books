@@ -1,0 +1,34 @@
+<div id="write">
+    <h1>Write a book!</h1>
+    <form id="writeForm" novalidate>
+        <div class="row row-margin">
+            <div class="col-md-2">
+                Title:
+            </div>
+            <div class="col-md-4">
+                <input data-ng-model="writeForm.title" />
+            </div>
+        </div>
+        <div class="row row-margin">
+            <div class="col-md-2">
+                Number of chapters:
+            </div>
+            <div class="col-md-4">
+                <select data-ng-model="writeForm.numChapters">
+                    <option data-ng-repeat="n in [1,2,3,4,5]" value="{{n}}">{{n}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row row-margin">
+            <div class="col-md-6">
+                Who knew writing a book could be so easy?  Just enter a title, choose the number of chapters,
+                and click Generate.  We'll produce a book with a story you'll not soon forget.
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary" data-ng-disabled="!generateButtonIsEnabled()"
+                    data-ng-click="generateBook()">Generate the book!</button>
+            <a href="#/dashboard" class="btn btn-default">Cancel</a>
+        </div>
+    </form>
+</div>

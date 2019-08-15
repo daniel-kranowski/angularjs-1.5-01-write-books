@@ -1,0 +1,16 @@
+<div id="dashboard">
+    <h1>Library</h1>
+    <p>
+    <div data-ng-pluralize count="library.getBooks().length"
+         when="{'one': '1 book', 'other': '{} books'}"></div>
+    </p>
+    <ul>
+        <li data-ng-repeat="book in library.getBooks()"
+            data-ng-click="readBook($index)">
+            {{book.shortTitle}}
+        </li>
+    </ul>
+
+    <h1>Write a book</h1>
+    <p><a href="#/write" class="btn btn-primary">Write a book!</a></p>
+</div>

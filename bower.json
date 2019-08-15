@@ -1,0 +1,17 @@
+{
+    "name": "angularjs-1.5-01-write-books",
+    "description": "AngularJS demonstration application",
+    "version": "1.0.0",
+    "homepage": "",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "angular": "~1.5.8",
+        "angular-bootstrap": "~2.5.0",
+        "angular-mocks": "~1.5.8",
+        "angular-route": "~1.5.8",
+        "angular-sanitize": "~1.5.8",
+        "bootstrap": "3.3.4",
+        "lodash": "~4.17.4"
+    }
+}
